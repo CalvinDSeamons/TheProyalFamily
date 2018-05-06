@@ -1,0 +1,105 @@
+Calvin Seamons
+Prolog Lab csci305
+All questions are answered using my prolog code!
+
+1)?- father(X,'Queen Elizabeth II').
+  X = 'King George VI' 
+
+
+2)?- grandmother(X,'Queen Elizabeth II').
+  X = 'Queen Mary'
+
+
+3)?- grandfather(X,'Queen Elizabeth II').
+  X = 'King George V’
+
+
+4) ?- grandparent(X,'Queen Elizabeth II').
+   X = 'King George V' ;
+   X = 'Queen Mary'
+
+
+5) ?- grandparent('Queen Elizabeth II',X).
+   X = 'Prince William' ;
+   X = 'Prince Henry'
+
+
+6) ?- sibling(X,'Queen Elizabeth II').
+   X = 'Princess Margaret'
+
+
+7)?- son(X,'Queen Elizabeth II').
+  X = 'Prince Charles' ;
+  X = 'Prince Andrew' ;
+  X = 'Prince Edward'.
+
+
+8)?- daughter(X,'Queen Elizabeth II').
+  X = 'Princess Anne' 
+
+
+9)?- aunt(X,'Lady Diana Spencer').
+  X = 'Princess Margaret' ; (This is aunt-inlaw, so technically not really an aunt but an aunt by marriage despite being divorced and dead…)  
+ 
+
+10) ?- spouse(X,'Prince William').
+    X = 'Catherine Middleton'.
+
+
+11) ?- ancestor(X,'Prince Henry').
+    X = 'Prince Charles' ;
+    X = 'Lady Diana Spencer' ;
+    X = 'Prince Albert' ;
+    X = 'Queen Victoria' ;
+    X = 'King Edward VII' ;
+    X = 'Princess Alexandra of Denmark' ;
+    X = 'King George V' ;
+    X = 'Queen Mary' ;
+    X = 'King George VI' ;
+    X = 'Lady Elizabeth Bowes-Lyon' ;
+    X = 'Queen Elizabeth II' ;
+    X = 'Prince Philip' ;
+
+12)  ?- descendant('Queen Victoria’,Y).
+	false. By asking this you are saying “Queen Victoria is the descendant of who?
+	Queen Victoria is the oldest entry in the royal.py therefor no data can be retrieve with this call
+
+
+13) ?- older('Prince Henry','Prince William').
+    false.   (it says false as Prince henry is younger than prince William)
+
+
+14) ?- older(X,'Queen Elizabeth II').
+    X = 'Lady Elizabeth Bowes-Lyon' ;
+    X = 'Prince Philip' 
+
+
+15) ?- regentWhenBorn(X,'Queen Elizabeth II').
+    X = 'King George V'
+
+
+16) What i like about prolog is how the functions are created with the data sets. It’s almost like a super simplistic yet complicated hierarchy as every single function builds on its self starting with the very basic data inputs like “marriage” “parent” ect and from only a few you can have massive functions.
+
+
+17) I disliked debugging and the variable requirements. Having to have a capital X or Y made debugging hard for larger functions, the tracer was helpful but when you had a long functions such as uncle or aunt through marriage or used recursive calls it became very hard to look at and understand what was happening.
+
+
+18)I enjoyed this lab, Prolog is actually a really cool idea for a coding language. Also doing stuff with family trees its pretty fun. I could enter in my family history and make my own prolog tree! Furthermore the concepts were not to difficult to grasp so this was way less stressful to finish. 
+
+19) I spent roughly 1-2 hours on the lab. 
+
+20) Yes, as i said before making my own family tree would be fun. My grandmother has a paper family tree she created in her years of retirement that goes back to the 12th century. It would fun to add her data into a program such as this. Also i could see Prolog being super awesome in Database systems. Very small functions that are repeatedly called to get every valid option would be awesome. 
+
+
+EC1) ?- cousin(X,'Prince Charles').
+     X = 'Viscount Linley' ;
+     X = 'Lady Sarah Chatto' ;
+
+EC2) ?- cousin('Prince Charles',X).
+     X = 'Viscount Linley' ;
+     X = 'Lady Sarah Chatto' ;
+
+
+The answers are the same as EC1 is asking “who are the cousins of Prince Charles?” the second EC2 is asking “Prince Charles is the cousins of who” therefor we get the same answer for both. 
+
+
